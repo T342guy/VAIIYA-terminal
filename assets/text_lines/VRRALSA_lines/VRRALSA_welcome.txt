@@ -1,0 +1,6 @@
+
+Welcome VAIIYA trustee or other high authorization.
+|
+This is the V.AIIYA R.ESTRICTED R.ECORDS A.ND L.OGS S.YSTEM A.UTOMATED Terminal.
+where some (not all) user records are found. use keywords to access records.
+use(s) command 'records' or 'logs' for available records

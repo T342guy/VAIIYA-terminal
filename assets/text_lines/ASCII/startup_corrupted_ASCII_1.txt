@@ -1,0 +1,18 @@
+
+ERR! NORM ASCII STARTUP FAILURE, USING ALT ASCII. APPLICATION IS STILL USEABLE.          
+                         _____   _____
+                          \____\  \____\
+_____      _____  ______  _____  _____  _____      _____  ______
+\    \    /    / /      \ \    \ \    \ \    \    /    / /      \
+ \    \  /    / /        \ \    \ \    \ \    \  /    / /        \
+  \    \/    / /    /\    \ \    \ \    \ \    \/    / /    /\    \
+   \        / /    /  \    \ \    \ \    \ \        / /    /  \    \
+    \______/ /____/    \____\ \____\ \____\ \      / /____/    \____\
+                                            /     /
+                                           /     /
+                                          /_____/
+                    VAIIYA technologies LLC
+            Empowering security, one byte at a time.
+
+                                            
+        please wait while the program does mandatory checks.

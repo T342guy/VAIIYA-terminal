@@ -35,27 +35,9 @@ def startup_screen_ascii_roll():
 
 #if the number is rolled correctly, then this ASCII will play instead of the norm. 
 def corrupted_ascii_startup_screen():
-    print(r"""
-
-ERR! NORM ASCII STARTUP FAILURE, USING ALT ASCII. APPLICATION IS STILL USEABLE.          
-                         _____   _____
-                          \____\  \____\
-_____      _____  ______  _____  _____  _____      _____  ______
-\    \    /    / /      \ \    \ \    \ \    \    /    / /      \
- \    \  /    / /        \ \    \ \    \ \    \  /    / /        \
-  \    \/    / /    /\    \ \    \ \    \ \    \/    / /    /\    \
-   \        / /    /  \    \ \    \ \    \ \        / /    /  \    \
-    \______/ /____/    \____\ \____\ \____\ \      / /____/    \____\
-                                            /     /
-                                           /     /
-                                          /_____/
-                    VAIIYA technologies LLC
-            Empowering security, one byte at a time.
-
-                                            
-        please wait while the program does mandatory checks.
-
-""")
+    with open("assets/text_lines/ASCII/startup_corrupted_ASCII_1.txt") as f: # The with keyword automatically closes the file when you are done
+        print(f.read())
+        f.close()
 
 
 
@@ -63,35 +45,11 @@ _____      _____  ______  _____  _____  _____      _____  ______
 
 # Loading screen with VAIIYA SECURITY ASCII Art
 def norm_startup_screen_ASCII():
-    print_formatted_text(r"""
+    with open("assets/text_lines/ASCII/startup_ASCII_1.txt") as f: # The with keyword automatically closes the file when you are done
+        print(f.read())
+        f.close()
 
-                                             __________   __________
-                                             \|||||||||\ \::::::::::\
-                                              \|||||||||\ \::::::::::\
-                                               \|||||||||\ \::::::::::\
-                                                \|||||||||\ \::::::::::\
-\-------\             /--------/  /------\  \--------\  \--------\  \--------\           /---------/  /------\
- \.......\           /......../  /........\  \........\  \........\  \........\         /........./  /........\
-  \.......\         /......../  /..........\  \........\  \........\  \........\       /........./  /..........\
-   \.......\       /......../  /............\  \........\  \........\  \........\     /........./  /............\
-    \.......\     /......../  /......__......\  \........\  \........\  \........\   /........./  /..............\
-     \.......\   /......../  /....../  \......\  \........\  \........\  \........\_/........./  /....../  \......\
-      \.......\ /......../  /....../    \......\  \........\  \........\  \................../  /....../    \......\
-       \................/  /....../      \......\  \........\  \........\  \................/  /....../      \......\
-        \............../  /....../        \......\  \........\  \........\  \............../  /....../        \......\
-         \............/  /....../          \......\  \........\  \........\  \............/  /....../          \......\
-          \........../  /....../            \......\  \........\  \........\  \........../  /....../            \......\
-                                                                              /........./
-                                                                             /........./
-                                                                            /........./
-                                                                           /........./
-                                                                          /---------/
-                                                    VAIIYA technologies LLC
-                                            Empowering security, one byte at a time.
 
-                                            
-                                    please wait while the program does mandatory checks.
-    """)
 #title stuff for new loading screen 
 #BEHAVIOR NOTE: THE PROMPT TK LOADINGBARS CANNOT GO OVER .01 FLOAT FOR SOME REASON! (thanks smashel for the idea, but was unable to make it happen)
 def loading_bars_intro_1():
@@ -157,56 +115,52 @@ def loading_bars_intro_3():
 
 # Display main menu
 def main_menu():
-    print(r"""
-                                             __________   __________
-                                             \|||||||||\ \::::::::::\
-                                              \|||||||||\ \::::::::::\
-                                               \|||||||||\ \::::::::::\
-                                                \|||||||||\ \::::::::::\
-\-------\             /--------/  /------\  \--------\  \--------\  \--------\           /---------/  /------\
- \.......\           /......../  /........\  \........\  \........\  \........\         /........./  /........\
-  \.......\         /......../  /..........\  \........\  \........\  \........\       /........./  /..........\
-   \.......\       /......../  /............\  \........\  \........\  \........\     /........./  /............\
-    \.......\     /......../  /......__......\  \........\  \........\  \........\   /........./  /..............\
-     \.......\   /......../  /....../  \......\  \........\  \........\  \........\_/........./  /....../  \......\
-      \.......\ /......../  /....../    \......\  \........\  \........\  \................../  /....../    \......\
-       \................/  /....../      \......\  \........\  \........\  \................/  /....../      \......\
-        \............../  /....../        \......\  \........\  \........\  \............../  /....../        \......\
-         \............/  /....../          \......\  \........\  \........\  \............/  /....../          \......\
-          \........../  /....../            \......\  \........\  \........\  \........../  /....../            \......\
-                                                                              /........./
-                                                                             /........./
-                                                                            /........./
-                                                                           /........./
-                                                                          /---------/
-                                                    VAIIYA technologies LLC
-                                            Empowering security, one byte at a time.
+   with open("assets/text_lines/ASCII/startup_ASCII_2login.txt") as f: # The with keyword automatically closes the file when you are done
+        print(f.read())
+        f.close()
 
-                                            
-                        Welcome to the Terminal! all checks are complete. you can continue on your work.
-    """)
 def message_of_the_day(): #or per boot 
     print("|")
     print("The message of the day is: ")
     print("|") 
     #picks a random number, each value (depending on how many messages) will have a number. 
-    MOTD = 3#random.randint(1,6)
+    MOTD = random.randint(1,6)
 
     if MOTD == 1: 
-        print("john? what the hell are you doing over there? GET BACK TO WO- ##TRANSCRIPT ENDED CODE 87##")
+        with open("assets/text_lines/MOTD/MOTD_1.txt") as f: # The with keyword automatically closes the file when you are done
+            print(f.read())
+            f.close()
+    
     elif MOTD == 2: 
-        print("Remember: CNS is our greatest enemy! WE CANNOT LET THEM INTO THE SYSTE- ## LOG SYSTEM FAILURE CODE #9)*^9 ##")
+        with open("assets/text_lines/MOTD/MOTD_2.txt") as f: # The with keyword automatically closes the file when you are done
+            print(f.read())
+            f.close()
+
     elif MOTD == 3:
-        print_formatted_text(HTML('<b>SYSTEM AUTOLOG OVERRIDE: SERVERS #108,#196,#102,#156,#342 HAVE BEEN ISOLATED. DO NOT CHANGE THIS ORDER.</b>'))
+        with open("assets/text_lines/MOTD/MOTD_3.txt") as f: # The with keyword automatically closes the file when you are done
+            print(f.read())
+            f.close()
+
     elif MOTD == 4:
-        print("VRRALSA systems detecting ##isU3s## within servers #342 and #902. please advise.")
+        with open("assets/text_lines/MOTD/MOTD_4.txt") as f: # The with keyword automatically closes the file when you are done
+            print(f.read())
+            f.close()
+
     elif MOTD == 5:
-        print("VAIIYA Engine update found! Please install immediately for best security. Thankyou for understanding.")
+        with open("assets/text_lines/MOTD/MOTD_5.txt") as f: # The with keyword automatically closes the file when you are done
+            print(f.read())
+            f.close()
+
     #remove this MOTD on the next update PAST christmas, maybe new years or when the snow melts. 
     elif MOTD == 6:
-        print("merry christmas VAIIYA employees! except for herbert...")
+        with open("assets/text_lines/MOTD/MOTD_xmas.txt") as f: # The with keyword automatically closes the file when you are done
+            print(f.read())
+            f.close()
+
     elif MOTD == 7:
-        print("Well well everyone! We got another highlight within THE FINALS! CNS cannot stop us now!. . . eh, john what is that over there? ## END OF FILE ##")
+        with open("assets/text_lines/MOTD/MOTD_6.txt") as f: # The with keyword automatically closes the file when you are done
+            print(f.read())
+            f.close()
 
 def timefetch():
 #time fetch for login
@@ -245,21 +199,10 @@ def open_terminal():
 
         #the credits for the game! 
         elif text == 'credits':
-            print("""|""")
-            print("""|""")
-            print("The credits of VAIIYA terminal!")
-            print("""|""")
-            print("Owner: T342, T342guy or Nathan johnson.")
-            print("licensed under MIT ©2024 Nathan Johnson. view LICENSE for more info.")
-            print("""|""")
-            print("contributors: ")
-            print("Smashel from discord.")
-            print("Riskit from discord.")
-            print("""|""")
-            print("""|""")
-            print("and thats all for now! have fun, stay safe and secure! VAIIYA trustees and THE FINALS contestants!")
-            print("""|""")
-            
+            with open("assets/text_lines/commands_lines/line_credits.txt") as f: # The with keyword automatically closes the file when you are done
+                print(f.read())
+                f.close()
+
         elif text == 'version':
             print("|")
             print("VAIIYA Terminal Engine version 24.39-overhaul_8")
@@ -307,20 +250,11 @@ def open_terminal():
 
             #the COMMANDS directory, DO NOT REMOVE!
         elif text == 'commands':
-            print("""|""")
-            print("""|""")
-            print("Available commands: (all may not be listed.)")
-            print("""|""")
-            print("command; walker | The login for CM|walker")
-            print("command; frostbyte | The login for CM|frostbyte")
-            print("command; version | check what version of VAIIYA terminal you are running!")
-            print("""C0MM#N0D;;. CNS | {ERROR: UNKNOWN PROGRAM ENTITY}""")
-            print("""|""")
-            print("""|""")
-            print("""command; credits | the credits to the game! (^///^) """)
-            print("command; discord | get a invite link to The VAIIYA hub!, a hang-about and VAIIYA-terminal server!")
-            print("""|""")
-            print("""|""")
+            with open("assets/text_lines/commands_lines/line_commands.txt") as f: # The with keyword automatically closes the file when you are done
+                print(f.read())
+                f.close()            
+
+
         #this solves the space command issue. leave blank    
         elif text == '':
             continue
@@ -560,12 +494,10 @@ def VRRALSA_startup():
     VRRALSA_COMMAND_PANEL()
 
 def VRRALSA_welcome_message():
-    print("|")
-    print("Welcome VAIIYA trustee or other high authorization. ")
-    print("|")
-    print("This is the V.AIIYA R.ESTRICTED R.ECORDS A.ND L.OGS S.YSTEM A.UTOMATED Terminal.")
-    print("where some (not all) user records are found. use keywords to access records.")
-    print("use command 'records' for available records ")
+    with open("assets/text_lines/VRRALSA_lines/VRRALSA_welcome.txt") as f: # The with keyword automatically closes the file when you are done
+        print(f.read())
+        f.close()
+
 def VRRALSA_COMMAND_PANEL():
     
     while True:
@@ -573,13 +505,12 @@ def VRRALSA_COMMAND_PANEL():
         VRRALSA_TEXT = prompt('V.R.R.A.L.S.A. awaiting command(s)>>>> ')
 
         if  VRRALSA_TEXT == 'test':
-            print("yes I do believe it works! ")
+            print("VRRALSA has received the ping.")
         
         elif VRRALSA_TEXT == 'logs':
-            print("|")
-            print("Current logs found in databases: ")
-            print("log: LOG_10079")
-            print("No other logs at this time")
+            with open("assets/text_lines/VRRALSA_lines/VRRALSA_commands/VRRALSA_logslist.txt") as f: # The with keyword automatically closes the file when you are done
+                print(f.read())
+                f.close()
 
         elif VRRALSA_TEXT == 'records':
             print("|")
@@ -612,13 +543,9 @@ def VRRALSA_COMMAND_PANEL():
             time.sleep(1)
             print("Record found!")
             print("|")
-            print("citizen record; frostbyte")
-            print("username=frost.dime")
-            print("user_traits= funny, quote'says UwU OwO and other. please advise' ")
-            print("health_record_status=True current_health_records=1479 current_untracked_health_records=1457 ")
-            print("record_severity=high highest_alert=severe mental issues unreported. ")
-            print("end of file.")
-            print("|")
+            with open("assets/text_lines/VRRALSA_lines/VRRALSA_records/VRRALSA_record_frostbyte.txt") as f: # The with keyword automatically closes the file when you are done
+                print(f.read())
+                f.close()            
 
         elif VRRALSA_TEXT == 'walker':
             print("|")

@@ -1,0 +1,12 @@
+
+
+Available commands: (all may not be listed.)
+|
+command; walker | The login for CM|walker
+command; frostbyte | The login for CM|frostbyte
+command; version | check what version of VAIIYA terminal you are running!
+C0MM#N0D;;. CNS | {ERROR: UNKNOWN PROGRAM ENTITY}
+|
+|
+command; credits | the credits to the game! (^///^)
+command; discord | get a invite link to The VAIIYA hub!, a hang-about and VAIIYA-terminal server!
