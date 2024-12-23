@@ -1,0 +1,6 @@
+citizen record; violet
+username=violet_120
+user_traits= dormant and non-responsive when on duty. does not interact without a ping. 
+health_record_status=True current_records=7 record_severity=low highest_alert=NONE
+end of file.
+|

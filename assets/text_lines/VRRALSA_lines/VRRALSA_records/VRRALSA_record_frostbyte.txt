@@ -1,4 +1,3 @@
-
 citizen record; frostbyte
 username=frost.dime
 user_traits= funny, quote'says UwU OwO and other. please advise'

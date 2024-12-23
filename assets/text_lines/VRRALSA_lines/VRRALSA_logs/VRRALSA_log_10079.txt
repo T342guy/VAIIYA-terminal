@@ -1,0 +1,21 @@
+VAIIYA systems log #10079 title=whats going on? from=employee#4972 name=herbert to=system_wide
+|
+herbert: hello? hey guys whats going on over there? i keep getting error [CO45RuP43D #G453] all over the system!
+-
+herbert: @security_dev do we have a fix for this? like, I CANT DO MY JOB KINDA ISSUE HERE
+-                                                                                 
+greg@security: hey herbert! uhh, ive never seen that error code before... wait thats not even a VAIIYA engine error!
+>uh oh...
+-
+herbert: well do we have a fix at all? i cant do my job here! my machine is frozen with
+> 'damn you guys like a fight coming' message flashing!
+-
+greg@security: No you idiot! thats not a VAIIYA engine error!! do you know what this means?! do you not see that
+> mysterious message!?
+-
+herbert: uhh, no? im just trying to do my job man!
+-
+greg@security: YOU IDIOT CNS GOT INTO YOUR DAMN MACHINE!!!!!!!!!!
+-
+herbert: well shi-
+|

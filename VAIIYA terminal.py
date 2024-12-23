@@ -528,12 +528,9 @@ def VRRALSA_COMMAND_PANEL():
             time.sleep(1)
             print("Record found!")
             print("|")
-            print("citizen record; violet ")
-            print("username=violet_120")
-            print("user_traits= dormant and non-responsive when on duty. does not interact without a ping. ")
-            print("health_record_status=True current_records=7 record_severity=low highest_alert=NONE")
-            print("end of file.")
-            print("|")
+            with open("assets/text_lines/VRRALSA_lines/VRRALSA_records/VRRALSA_record_violet.txt") as f: # The with keyword automatically closes the file when you are done
+                print(f.read())
+                f.close()
 
         elif VRRALSA_TEXT == 'frostbyte':
             print("|")
@@ -555,12 +552,9 @@ def VRRALSA_COMMAND_PANEL():
             time.sleep(1)
             print("Record found!")
             print("|")
-            print("citizen record; Walker  user_traits=enjoys_'dinos' drinks_excessive_amounts_of_coffee ")
-            print("username=walkercm")
-            print("user_traits=enjoys_'dinos' drinks_excessive_amounts_of_coffee")
-            print("health_record_status=True current_records=17 record_severity=low highest_alert=heart_attack_of_coffee")
-            print("end of file.")
-            print("|")
+            with open("assets/text_lines/VRRALSA_lines/VRRALSA_records/VRRALSA_record_walker.txt") as f: # The with keyword automatically closes the file when you are done
+                print(f.read())
+                f.close() 
         #please put all records above here
         #put all logs below here! 
         elif VRRALSA_TEXT == 'LOG_10079':
@@ -571,31 +565,14 @@ def VRRALSA_COMMAND_PANEL():
             time.sleep(1)
             print("Log Found!")
             print("|")
-            print("VAIIYA systems log #10079 title=whats going on? from=employee#4972 name=herbert to=system_wide")
-            print("|")
-            print("herbert: hello? hey guys whats going on over there? i keep getting error [CO45RuP43D #G453] all over the system!")
-            print("-")
-            print("herbert: @security_dev do we have a fix for this? like, I CANT DO MY JOB KINDA ISSUE HERE")
-            print("-")                                                                                  #this is as far the terminal can go before softwrap
-            print("greg@security: hey herbert! uhh, ive never seen that error code before... wait thats not even a VAIIYA engine error!")
-            print(">uh oh...")
-            print("-")
-            print("herbert: well do we have a fix at all? i cant do my job here! my machine is frozen with ")
-            print("> 'damn you guys like a fight coming' message flashing!")
-            print("-")
-            print("greg@security: No you idiot! thats not a VAIIYA engine error!! do you know what this means?! do you not see that")
-            print("> mysterious message!?")
-            print("-")
-            print("herbert: uhh, no? im just trying to do my job man!")
-            print("-")
-            print("greg@security: YOU IDIOT CNS GOT INTO YOUR DAMN MACHINE!!!!!!!!!!")
-            print("-")
-            print("herbert: well shi-")
-            print("|")
+            with open("assets/text_lines/VRRALSA_lines/VRRALSA_logs/VRRALSA_log_10079.txt") as f: # The with keyword automatically closes the file when you are done
+                print(f.read())
+                f.close()
+
             print_formatted_text(HTML('<red>ERROR! LOG ENDED WITH CODE #570-A. ESTIMATED LOSS: 39% OF FILE LEFT.</red>'))
             print("End of log.")
         
-        elif VRRALSA_TEXT == 'LOG_342!&': 
+        elif VRRALSA_TEXT == 'LOG_342': 
             print("|")
             print("V.R.R.A.L.S.A. FINDING INQUIRY....")
             time.sleep(1)
@@ -603,26 +580,9 @@ def VRRALSA_COMMAND_PANEL():
             time.sleep(1)
             print("Log Found!")
             print("|")
-            print("VAIIYA systems log #342!& title=CORR&PTIO@NS from=employee#342 name=johnathan to=system_wide")
-            print("|")
-            print("johnathan: Hey GUYS! whats with all the CORR$PTION$? the server are also going HAYWIRE! my entire floors computers and servers are giving errors!")
-            print("-")
-            print("alfred@networking: heyoh johnny! wow... this is bad! ive seen another message about herbert and greg having beef over the same thing... ")
-            print("> herbert is the kind where he wants fixes and instantly... too bad sal likes his 'higher then heaven' ass ￣へ￣")
-            print("-")
-            print("johnathan: yooo alfred! thanks for the info! but back to the 'issues' going around... this is getting bad and sal is in the dark somehow! (´･ω･`)? ")
-            print("-")
-            print("alfred@networking: wait... is anyone in @server and @security using ports 2000 and 217? they are... open (。_。) and transferring files???? ")
-            print("-")
-            print("bret@security: Hi alfred! no not us! that is a bit odd... our team will look at it \(￣︶￣*\)) ")
-            print("-")
-            print("Yankovic@servers: Hi bret and alfred! No our servers, nor the new VAIIYA Engine is configured, let alone able to use those ports! odd (´･ω･`)? ")
-            print("-")
-            print("alfred@networking: johnny you know what ima say?")
-            print("-")
-            print("johnathan: I know you too well alfred (ﾉ*･ω･)ﾉ ")
-            print("-")
-            print("alfred@networking: well, shi- ## TRANSCRIPT ENDED CODE 7$()>? ## ")
+            with open("assets/text_lines/VRRALSA_lines/VRRALSA_logs/VRRALSA_log_342.txt") as f: # The with keyword automatically closes the file when you are done
+                print(f.read())
+                f.close()
 
 
 

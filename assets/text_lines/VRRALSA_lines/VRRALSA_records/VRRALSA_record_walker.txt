@@ -1,0 +1,7 @@
+citizen record; Walker  
+user_traits=enjoys_'dinos' drinks_excessive_amounts_of_coffee
+username=walkercm
+user_traits=enjoys_'dinos' drinks_excessive_amounts_of_coffee
+health_record_status=True current_records=17 record_severity=low highest_alert=heart_attack_of_coffee
+end of file.
+|
