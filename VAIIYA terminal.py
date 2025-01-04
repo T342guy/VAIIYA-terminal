@@ -235,7 +235,7 @@ def open_terminal():
 
             #the COMMANDS directory, DO NOT REMOVE!
         elif text == 'commands':
-            game.printfile("")
+            game.printfile("assets/text_lines/commands_lines/line_commands.txt")
 
 
         #this solves the space command issue. leave blank    
