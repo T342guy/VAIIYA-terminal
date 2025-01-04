@@ -235,7 +235,7 @@ def open_terminal():
 
             #the COMMANDS directory, DO NOT REMOVE!
         elif text == 'commands':
-            game.printfile("assets/text_lines/commands_lines/line_commands.txt")
+            game.printfile("")
 
 
         #this solves the space command issue. leave blank    
@@ -581,8 +581,9 @@ class game:
         try:
             with open(txtfilepath) as f: # The with keyword automatically closes the file when you are done
                     print(f.read())
-        except FileNotFoundError():
+        except:
             print_formatted_text(HTML('<red>ERR! FILEPRINT FAILURE</red>'))
+            
 
     #the game.quit() event is to make the rase systemexit look a bit better :3
     def quit():
