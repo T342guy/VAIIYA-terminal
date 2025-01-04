@@ -127,40 +127,26 @@ def message_of_the_day(): #or per boot
     MOTD = random.randint(1,6)
 
     if MOTD == 1: 
-        with open("assets/text_lines/MOTD/MOTD_1.txt") as f: # The with keyword automatically closes the file when you are done
-            print(f.read())
-            f.close()
+        game.printfile("assets/text_lines/MOTD/MOTD_1.txt")
     
     elif MOTD == 2: 
-        with open("assets/text_lines/MOTD/MOTD_2.txt") as f: # The with keyword automatically closes the file when you are done
-            print(f.read())
-            f.close()
+        game.printfile("assets/text_lines/MOTD/MOTD_2.txt")
 
     elif MOTD == 3:
-        with open("assets/text_lines/MOTD/MOTD_3.txt") as f: # The with keyword automatically closes the file when you are done
-            print(f.read())
-            f.close()
+        game.printfile("assets/text_lines/MOTD/MOTD_3.txt")
 
     elif MOTD == 4:
-        with open("assets/text_lines/MOTD/MOTD_4.txt") as f: # The with keyword automatically closes the file when you are done
-            print(f.read())
-            f.close()
+        game.printfile("assets/text_lines/MOTD/MOTD_4.txt")
 
     elif MOTD == 5:
-        with open("assets/text_lines/MOTD/MOTD_5.txt") as f: # The with keyword automatically closes the file when you are done
-            print(f.read())
-            f.close()
+        game.printfile("assets/text_lines/MOTD/MOTD_5.txt")
 
     #remove this MOTD on the next update PAST christmas, maybe new years or when the snow melts. 
     elif MOTD == 6:
-        with open("assets/text_lines/MOTD/MOTD_xmas.txt") as f: # The with keyword automatically closes the file when you are done
-            print(f.read())
-            f.close()
+        game.printfile("assets/text_lines/MOTD/MOTD_6.txt")
 
-    elif MOTD == 7:
-        with open("assets/text_lines/MOTD/MOTD_6.txt") as f: # The with keyword automatically closes the file when you are done
-            print(f.read())
-            f.close()
+    # elif MOTD == 7:
+    #     game.printfile("")
 
 def timefetch():
 #time fetch for login
@@ -177,7 +163,8 @@ def timefetch():
 def terminal_start_message():
     print(" for a list of commands, please type 'commands' ")
     print("""|""")
-
+ 
+    
 #TERMINAL BEHAVIOR NOTES! make sure to use `elif` instead of `if`. this will prevent the error string from printing if we return from the EEs or logins.
 #ANOTHER NOTE: exit() AND quit() COUNT AS DEBUGGING, SO A TRACKBACK WILL CALL. USE `raise SystemExit` FROM NOW ON!
 #
@@ -199,9 +186,7 @@ def open_terminal():
 
         #the credits for the game! 
         elif text == 'credits':
-            with open("assets/text_lines/commands_lines/line_credits.txt") as f: # The with keyword automatically closes the file when you are done
-                print(f.read())
-                f.close()
+            game.printfile("assets/text_lines/commands_lines/line_credits.txt")
 
         elif text == 'version':
             print("|")
@@ -250,9 +235,7 @@ def open_terminal():
 
             #the COMMANDS directory, DO NOT REMOVE!
         elif text == 'commands':
-            with open("assets/text_lines/commands_lines/line_commands.txt") as f: # The with keyword automatically closes the file when you are done
-                print(f.read())
-                f.close()            
+            game.printfile("assets/text_lines/commands_lines/line_commands.txt")
 
 
         #this solves the space command issue. leave blank    
@@ -267,14 +250,13 @@ def open_terminal():
         
         #error response
         else:
-            print("VAIIYA Engine did not detect that as a valid command.")
-            print("please check spelling, spaces, or other. or use 'commands'")
+            game_errs.Vengine_nocmd_found()
 
 # PLEASE PUT ALL 2ND DEF(S) BELOW THIS NOTE! 
 
 #MAKE SURE THIS IS DISABLED BEFORE RELEASE!!! 
 def DEBUG_COMMANDLINE():
-    if DEBUG_ENABLE() == True:
+    if DEVsettings.DEBUG_ENABLE() == True:
 
         while True:
             text = prompt('DEBUG COMMANDLINE >>> ')        
@@ -300,8 +282,8 @@ def DEBUG_COMMANDLINE():
 
             else:
                 print("use COMMANDS if you forgot")
-    if DEBUG_ENABLE() == False:
-        print("hahaha good try (￣y▽,￣)╭ ")
+    if DEVsettings.DEBUG_ENABLE() == False:
+        game_errs.debug_disabled()
 
 
 
@@ -328,7 +310,7 @@ def CNS_EE_HAKED():
          time.sleep(1)
          print("1")
          time.sleep(1)
-         raise SystemExit
+         game.quit()
     #if the `result` has a bool of False, then it will run this part of code. and again will return to menu and exit the program. 
     if result == False:
          message_dialog(
@@ -344,7 +326,7 @@ def CNS_EE_HAKED():
          time.sleep(1)
          print("1")
          time.sleep(1)
-         raise SystemExit
+         game.quit()
 #the idea above from smashel! 
 
 
@@ -584,8 +566,6 @@ def VRRALSA_COMMAND_PANEL():
                 print(f.read())
                 f.close()
 
-
-
         elif VRRALSA_TEXT == 'exit':
             return
         
@@ -593,39 +573,108 @@ def VRRALSA_COMMAND_PANEL():
             print("|")
             print("V.R.C.L. ERROR; KEYWORD DOES NOT LINK TO RECORD OR LOG. CHECK SPELLING, CAPS, OR OTHER.")
 #END OF THE VRCL COMMAND SYSTEM
+class game:
+    #the game class is for very often used tasks (eg the file printer)
+
+    #make sure that the filepath is an actual filepath with "" otherwise it WILL break 
+    def printfile(txtfilepath = ""):
+        try:
+            with open(txtfilepath) as f: # The with keyword automatically closes the file when you are done
+                    print(f.read())
+        except FileNotFoundError():
+            print_formatted_text(HTML('<red>ERR! FILEPRINT FAILURE</red>'))
+
+    #the game.quit() event is to make the rase systemexit look a bit better :3
+    def quit():
+        raise SystemExit
+    
+
+
+# setting are ova here dude 
+class DEVsettings:
 
 #BELOW IS THE DEBUG COMMANDLINE ENABLE, SET TO TRUE FOR IT TO WORK.  FALSE FOR RELEASE
-def DEBUG_ENABLE():
-    return True
+    def DEBUG_ENABLE():
+        return True #set to TRUE to enable the debug commandline 
 
-def DEBUG_STARTUP_DISABLE():
-    return True
+    def DEBUG_STARTUP_DISABLE():
+        return True  #set to TRUE to disable the startup part of VT
 
-def STARTUP_DEBUG_CHECK():
-    if DEBUG_STARTUP_DISABLE() == False:
-        startup_screen_ascii_roll()
-        loading_bars_combined_startup()
+    def STARTUP_DEBUG_CHECK():
+        if DEVsettings.DEBUG_STARTUP_DISABLE() == False:
+            startup_screen_ascii_roll()
+            startup_shortcuts.loading_bars_combined_startup()
     
-    if DEBUG_STARTUP_DISABLE() == True:
-        pass
+        if DEVsettings.DEBUG_STARTUP_DISABLE() == True:
+            pass
+
+        
+class DEVtools:
+
+    def debug_enabled_reminder():
+# a simple reminders system that the debug system is turned on 
+        if DEVsettings.DEBUG_ENABLE() == True:
+            print_formatted_text(HTML('<red>THE DEBUG COMMANDLINE IS ENABLED!!</red>'))
+    
+        if DEVsettings.DEBUG_ENABLE() == False:
+            pass
+    
+        if DEVsettings.DEBUG_STARTUP_DISABLE() == False:
+            pass
+
+        if DEVsettings.DEBUG_STARTUP_DISABLE() == True:
+            print_formatted_text(HTML('<red>THE STARTUP IS DISABLED!!</red>'))
 
 
-def terminal_startup_combined():
-    main_menu()
-    message_of_the_day()
-    timefetch()
-    terminal_start_message()
-    open_terminal()
+class startup_shortcuts:
+    def terminal_startup_combined():
+        main_menu()
+        message_of_the_day()
+        timefetch()
+        terminal_start_message()
+        DEVtools.debug_enabled_reminder()
+        open_terminal()
 
-def loading_bars_combined_startup():
-    loading_bars_intro_1()
-    loading_bars_intro_2()
-    loading_bars_intro_3()
+    def loading_bars_combined_startup():
+        loading_bars_intro_1()
+        loading_bars_intro_2()
+        loading_bars_intro_3()
+
+class game_errs:
+
+    def Vengine_nocmd_found():
+        print("VAIIYA Engine did not detect that as a valid command.")
+        print("please check spelling, spaces, or other. or use 'commands'")
+
+    def debug_disabled():
+        print("VAIIYA Engine did not detect a VAIIYA granted systems card.")
+        print("If you are a VAIIYA employee, please contact your district supervisor for more info.")
+
+
+
+
+# BELOW THIS NOTE IS ONLY RAISE ERRORS!!! DO NOT REMOVE ANY OF THIS!!!!! 
+class this_broke:
+    pass
+# this class is for errors outside of normal use, like the file printer not finding the file
+
+# class fileprintfail(FileNotFoundError):
+# # this error is used to be user friendly, and debug friendly. while also giving it a keen eye
+#     def __init__(self, *args):
+#         super().__init__(*args)
+        
+#         try:
+#             raise fileprintfail
+#         except fileprintfail as e:
+#             print_formatted_text(HTML('<red>ERR! FILEPRINT FAILURE</red>', e.strerror ))
+
+    
+
 
 # Main system loop
 def game_loop():
-    STARTUP_DEBUG_CHECK()
-    terminal_startup_combined()
+    DEVsettings.STARTUP_DEBUG_CHECK()
+    startup_shortcuts.terminal_startup_combined()
     
     while True:
         #there is no code to run right before startup so there is a `pass` here. 
