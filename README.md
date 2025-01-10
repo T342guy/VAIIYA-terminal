@@ -53,6 +53,11 @@ Hello fello VAIIYA Trustees! if you want to help with the progress of VAIIYA Ter
 1. get Github desktop if you dont have it already :3  
 
 > [!IMPORTANT] 
+> Hello again everyone! just a quick edit, this note below is purely incorrect,
+> and i am working on a fix. In the meantime i will gather more info and fix this 
+> soon. Thank you for understanding.
+>
+>
 > *make sure you are using a **global** installation of python 3 for it to recognise the installed modules! if you use the "recommended" python3 installation from VScode, you will get errors of `reportMissingImports`!*  
 > get the latest release here: [python downloads](https://www.python.org/downloads/)
 
