@@ -12,6 +12,11 @@
 
 # Welcome to the VAIIYA terminal project page!
 
+
+> [!IMPORTANT]
+> Notices about VAIIYA Termial will show up in this note! 
+
+
 Welcome VAIIYA trustees and fellow THE FINALS contestants!
 welcome to my VAIIYA terminal project page! 
 
