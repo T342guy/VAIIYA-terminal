@@ -1,19 +1,19 @@
-
-import time
+import time # basic tool imports here used a lot
 import os
+import sys
+import random
+import prompt_toolkit
 from prompt_toolkit.shortcuts import ProgressBar
-from prompt_toolkit.formatted_text import HTML
-from prompt_toolkit import prompt
+from prompt_toolkit.formatted_text import HTML # really good for colored text
+from prompt_toolkit import prompt #general CMD prompts (NOT THE POPUPS)
 from prompt_toolkit.shortcuts import message_dialog
 from prompt_toolkit.shortcuts import yes_no_dialog
 from prompt_toolkit.shortcuts import input_dialog
-import time
-import bcrypt
+import bcrypt # bcrypt is used for the password thingys 
 from datetime import datetime
 from prompt_toolkit import print_formatted_text, HTML
-import random
-import tkinter.messagebox 
-import sys
+import tkinter.messagebox # the windows popup controller
+
 #changes the size of the Command prompt so it is easier to read (and that the ASCII doesnt soft wrap)
 #from ctypes import wintypes
 #from ctypes import windll, byref
@@ -35,9 +35,7 @@ def startup_screen_ascii_roll():
 
 #if the number is rolled correctly, then this ASCII will play instead of the norm. 
 def corrupted_ascii_startup_screen():
-    with open("assets/text_lines/ASCII/startup_corrupted_ASCII_1.txt") as f: # The with keyword automatically closes the file when you are done
-        print(f.read())
-        f.close()
+    game.printfile("assets/text_lines/ASCII/startup_corrupted_ASCII_1.txt")
 
 
 
@@ -615,7 +613,7 @@ class DEVtools:
     def debug_enabled_reminder():
 # a simple reminders system that the debug system is turned on 
         if DEVsettings.DEBUG_ENABLE() == True:
-            print_formatted_text(HTML('<red>THE DEBUG COMMANDLINE IS ENABLED!!</red>'))
+            print_formatted_text(HTML('<red>DEBUG MODE IS ENABLED</red>'))
     
         if DEVsettings.DEBUG_ENABLE() == False:
             pass
@@ -685,8 +683,8 @@ def game_loop():
 game_loop()
 
 #this func is not required for the operation of the program, so it is disabled.
-#if __name__ == "__main__":
-#        main()
+# if __name__ == "__main__":
+#     game_loop()
 
 
 
