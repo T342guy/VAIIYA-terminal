@@ -13,7 +13,8 @@ import bcrypt # bcrypt is used for the password thingys
 from datetime import datetime
 from prompt_toolkit import print_formatted_text, HTML
 import tkinter.messagebox # the windows popup controller
-
+from alive_progress import alive_bar
+from alive_progress.styles import showtime
 #changes the size of the Command prompt so it is easier to read (and that the ASCII doesnt soft wrap)
 #from ctypes import wintypes
 #from ctypes import windll, byref
@@ -267,6 +268,15 @@ def DEBUG_COMMANDLINE():
 
             elif text == 'FROST':
                 frostbyte_entered()
+            
+            elif text == 'SHOWTIME':
+                showtime()
+
+            elif text == 'BAR': 
+                with alive_bar(title="TESTING THE BARS!! noice") as bar:
+                    for i in range(1000):
+                        time.sleep(.005)
+                        bar()
 
             elif text == 'COMMANDS':
                 print("commands:")

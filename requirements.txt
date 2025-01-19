@@ -1,3 +1,4 @@
 bcrypt>=4.2.1
 prompt_toolkit>=3.0.48
 wcwidth>=0.2.13
+alive-progress>=3.2.0
