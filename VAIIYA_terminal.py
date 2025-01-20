@@ -54,40 +54,43 @@ def headstart():
 class startup_func():
     
     def bar_1():
-        with alive_bar(title="prepping to load system assets...") as bar:
+        with alive_bar(528, title="prepping to load system assets...",monitor=False ,stats=False ) as bar:
                     for i in range(528):
                         time.sleep(.005)
                         bar()
 
     def bar_2():
-        with alive_bar( 792 ,title="Compiling assets...") as bar:
+        with alive_bar( 792 ,title="Compiling assets...",stats=False) as bar:
                     for i in range(792):
                         time.sleep(.005)
                         bar()       
     
     def bar_interpreter_prep():
-        with alive_bar(title="pre-loading and prepping the interpreter") as bar:
-                    for i in range(978):
+        with alive_bar(670, title="pre-loading and prepping the interpreter", monitor=False, stats='ETA: {eta}',  ) as bar:
+                    for i in range(670):
                         time.sleep(.005)
                         bar() 
 
     def bar_3():
-        with alive_bar(title="prepping to send package for VAIIYA system connections...") as bar:
-                    for i in range(939):
+        with alive_bar(total=892, title="prepping to send package for VAIIYA system(s) connections...", monitor=False ,stats=False ,) as bar: #NOTE bar shi is broken asf, cant get that unknown to work, and cant change the style without it going left to right. not back and forth like i want.
+                    for i in range(892):
                         time.sleep(.005)
                         bar() 
 
     def bar_4():
-        with alive_bar(title="sending, please wait...") as bar:
+        with alive_bar(600, title="sending, please wait...", monitor=False, stats=False) as bar:
                     for i in range(600):
                         time.sleep(.005)
                         bar() 
 
     def bar_5():
-        with alive_bar(title="requesting system access...") as bar:
+        with alive_bar(428, title="requesting system access...", monitor=False, stats=False) as bar:
                     for i in range(428):
                         time.sleep(.005)
                         bar() 
+
+
+
 
 
 
