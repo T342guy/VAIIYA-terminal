@@ -14,7 +14,8 @@ from datetime import datetime
 from prompt_toolkit import print_formatted_text, HTML
 import tkinter.messagebox # the windows popup controller
 from alive_progress import alive_bar #replacement loading bars that look wayyyyy better :> 
-from alive_progress.styles import showtime
+from alive_progress.styles import showtime, Show
+
 
 def headstart():
 # ATTENTION!! READ THIS BEFORE YOU DO SOME SHI 
@@ -52,43 +53,55 @@ def headstart():
 
 
 class startup_func():
-    
+    #notes
+    # the unknown module is broke :> 
+    # 
     def bar_1():
-        with alive_bar(528, title="prepping to load system assets...",monitor=False ,stats=False ) as bar:
-                    for i in range(528):
+        with alive_bar(title="prepping to load system assets...",monitor=False ,stats=False,elapsed='Time elapsed: {elapsed}',elapsed_end='Task was done in {elapsed}',stats_end=False) as bar:
+                    for i in range(rangerandom1):
                         time.sleep(.005)
                         bar()
 
     def bar_2():
-        with alive_bar( 792 ,title="Compiling assets...",stats=False) as bar:
-                    for i in range(792):
+        with alive_bar( rangerandom2,title="Compiling assets...",stats='ETA: {eta}', monitor=False,elapsed='Time elapsed: {elapsed}',elapsed_end='Task was done in {elapsed}',stats_end=False) as bar:
+                    for i in range(rangerandom2):
                         time.sleep(.005)
                         bar()       
     
     def bar_interpreter_prep():
-        with alive_bar(670, title="pre-loading and prepping the interpreter", monitor=False, stats='ETA: {eta}',  ) as bar:
-                    for i in range(670):
+        with alive_bar(rangerandom3, title="pre-loading and prepping the interpreter", monitor=False, stats='ETA: {eta}',elapsed='Time elapsed: {elapsed}',elapsed_end='Task was done in {elapsed}',stats_end=False) as bar:
+                    for i in range(rangerandom3):
                         time.sleep(.005)
                         bar() 
 
     def bar_3():
-        with alive_bar(total=892, title="prepping to send package for VAIIYA system(s) connections...", monitor=False ,stats=False ,) as bar: #NOTE bar shi is broken asf, cant get that unknown to work, and cant change the style without it going left to right. not back and forth like i want.
-                    for i in range(892):
+        with alive_bar(rangerandom4, title="prepping to send package for VAIIYA system(s) connections...", monitor=False ,stats='ETA: {eta}',elapsed='Time elapsed: {elapsed}',elapsed_end='Task was done in {elapsed}',stats_end=False) as bar: #NOTE bar shi is broken asf, cant get that unknown to work, and cant change the style without it going left to right. not back and forth like i want.
+                    for i in range(rangerandom4):
                         time.sleep(.005)
                         bar() 
 
     def bar_4():
-        with alive_bar(600, title="sending, please wait...", monitor=False, stats=False) as bar:
-                    for i in range(600):
+        with alive_bar(rangerandom5, title="sending, please wait...", monitor=False, stats='ETA: {eta}',elapsed='Time elapsed: {elapsed}',elapsed_end='Task was done in {elapsed}',stats_end=False) as bar:
+                    for i in range(rangerandom5):
                         time.sleep(.005)
                         bar() 
-
+# this bar will play the back and forth animation
     def bar_5():
-        with alive_bar(428, title="requesting system access...", monitor=False, stats=False) as bar:
-                    for i in range(428):
+        with alive_bar(title="requesting system access...", monitor=False, stats=False,elapsed='Time elapsed: {elapsed}',elapsed_end='Task was done in {elapsed}',stats_end=False) as bar:
+                    for i in range(rangerandom6):
                         time.sleep(.005)
                         bar() 
 
+
+
+# this randomizes the length of all the bars 
+rangerandom1 = random.randint(300, 800)
+rangerandom2 = random.randint(300, 800)
+rangerandom3 = random.randint(300, 800)
+rangerandom4 = random.randint(300, 800)
+rangerandom5 = random.randint(300, 800)
+rangerandom6 = random.randint(300, 800)
+         
 
 
 
@@ -230,6 +243,12 @@ def DEBUG_COMMANDLINE():
                     for i in range(1000):
                         time.sleep(.005)
                         bar()
+            
+            elif text == 'SHOWTIMEBARS':
+                 showtime(Show.BARS)
+
+            elif text == 'SHOWTIMETHEMES':
+                 showtime(Show.THEMES)
 
             elif text == 'TYPE':
                 pass
