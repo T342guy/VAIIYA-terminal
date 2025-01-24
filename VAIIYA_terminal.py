@@ -21,7 +21,7 @@ def headstart():
 # ATTENTION!! READ THIS BEFORE YOU DO SOME SHI 
 # the headstart def is the MAIN STARTUP DEF AND IS USED TO MAKE THE MAIN STARTUP ILLUSION!!
 
-    
+    # start of the startup
     time.sleep(0.20)
     startup_func.bar_interpreter_prep()
     time.sleep(0.6)
@@ -31,14 +31,7 @@ def headstart():
     time.sleep(.1)
     print("loading system modules...")
     time.sleep(0.20)
-    startup_func.module_randor()
-    time.sleep(.10)
-    startup_func.module_randor()
-    time.sleep(.10)
-    startup_func.module_randor()
-    time.sleep(.10)
-    startup_func.module_randor()
-    time.sleep(.10)
+    # MODULE RANDOR LISTER
     startup_func.module_randor()
     time.sleep(0.20)
     startup_func.bar_2()
@@ -99,42 +92,29 @@ class startup_func():
 
     def module_randor():
         #this part randomizes the order of all the "modules"
-        # to add more "modules", just increase the randint number and the list size :>
-            module_randpickees = ["1:  module: compute module A7c version 2.3.11",
-                                  "2:  module: V.A.N. NETWORK DRIVER A7B9 version 0.3.11 ",
-                                  "3:  module: printfile system custom A4c version 1.2.19 ",
-                                  "4:  module: time and server sync systems X93B version 7.0.9",
-                                  "5:  module: interruption resolver and re-connector V43Z version 2.20.2"]
-            module_randpicker = random.choice(module_randpickees)
-            
-            print(module_randpicker)
-            # module_randpicker = random.randint(1,5)
+        seen_list = []
+        random.seed()
+        module_randpickees = ["module: compute module A7c version 2.3.11",
+                                "module: V.A.N. NETWORK DRIVER A7B9 version 0.3.11 ",
+                                "module: printfile system custom A4c version 1.2.19 ",
+                                "module: time and server sync systems X93B version 7.0.9",
+                                "module: interruption resolver and re-connector V43Z version 2.20.2"]
+        time.sleep(.10)
+        while True:
+            if len(seen_list) == len(module_randpickees): 
+                break
 
-            # if module_randpicker == 1:
-            #     print(module_randpicked1)
-        
-            # elif module_randpicker == 2:
-            #     print(module_randpicked2)
-        
-            # elif module_randpicker == 3:
-            #     print(module_randpicked3)
+            n = random.randrange(len(module_randpickees))
 
-            # elif module_randpicker == 4:
-            #     print(module_randpicked4)
+            try:
+                seen_list.index(n)
+                continue
 
-            # elif module_randpicker == 5:
-            #     print(module_randpicked5)
+            except ValueError:
+                    pass
 
-            # elif module_randpicker == 6:
-            #     pass # there is no string here just yet :>
-         
-
-# all different module strings 
-module_randpicked1 = "1:  module: compute module A7c version 2.3.11"
-module_randpicked2 = "2:  module: V.A.N. NETWORK DRIVER A7B9 version 0.3.11 "
-module_randpicked3 = "3:  module: printfile system custom A4c version 1.2.19 "
-module_randpicked4 = "4:  module: time and server sync systems X93B version 7.0.9"
-module_randpicked5 = "5:  module: interruption resolver and re-connector V43Z version 2.20.2"
+            print(module_randpickees[n])
+            seen_list.append(n)
 
 # this randomizes the length of all the bars 
 rangerandom1 = random.randint(300, 800)
