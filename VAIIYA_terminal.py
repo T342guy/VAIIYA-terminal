@@ -30,10 +30,10 @@ def headstart():
     startup_func.bar_1()
     time.sleep(.1)
     print("loading system modules...")
-    time.sleep(0.20)
+    time.sleep(0.45)
     # MODULE RANDOR LISTER
     startup_func.module_randor()
-    time.sleep(0.20)
+    time.sleep(0.30)
     startup_func.bar_2()
     time.sleep(0.30)
     startup_func.bar_3()
