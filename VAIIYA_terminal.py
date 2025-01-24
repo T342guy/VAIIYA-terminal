@@ -25,17 +25,21 @@ def headstart():
     time.sleep(0.20)
     startup_func.bar_interpreter_prep()
     time.sleep(0.6)
-    print("script open and ready for run, please wait")
+    print("program open and ready for run, please wait")
     time.sleep(0.20)
     startup_func.bar_1()
     time.sleep(.1)
-    print("loading system assets...")
+    print("loading system modules...")
     time.sleep(0.20)
-    print("asset: compute module A7c version 2.3.11")
-    print("asset: network translator and encoder module A7B9 version 0.3.11 ")
-    print("asset: printfile system custom A4c version 1.2.19 ")
-    print("asset: time and server sync systems X93B version 7.0.9")
-    print("asset: interruption resolver and re-connector V43Z version 2.20.2")
+    startup_func.module_randor()
+    time.sleep(.10)
+    startup_func.module_randor()
+    time.sleep(.10)
+    startup_func.module_randor()
+    time.sleep(.10)
+    startup_func.module_randor()
+    time.sleep(.10)
+    startup_func.module_randor()
     time.sleep(0.20)
     startup_func.bar_2()
     time.sleep(0.30)
@@ -46,6 +50,7 @@ def headstart():
     startup_func.bar_5()
     time.sleep(0.30)
     print("access approved")
+
 
 
 
@@ -92,7 +97,44 @@ class startup_func():
                         time.sleep(.005)
                         bar() 
 
+    def module_randor():
+        #this part randomizes the order of all the "modules"
+        # to add more "modules", just increase the randint number and the list size :>
+            module_randpickees = ["1:  module: compute module A7c version 2.3.11",
+                                  "2:  module: V.A.N. NETWORK DRIVER A7B9 version 0.3.11 ",
+                                  "3:  module: printfile system custom A4c version 1.2.19 ",
+                                  "4:  module: time and server sync systems X93B version 7.0.9",
+                                  "5:  module: interruption resolver and re-connector V43Z version 2.20.2"]
+            module_randpicker = random.choice(module_randpickees)
+            
+            print(module_randpicker)
+            # module_randpicker = random.randint(1,5)
 
+            # if module_randpicker == 1:
+            #     print(module_randpicked1)
+        
+            # elif module_randpicker == 2:
+            #     print(module_randpicked2)
+        
+            # elif module_randpicker == 3:
+            #     print(module_randpicked3)
+
+            # elif module_randpicker == 4:
+            #     print(module_randpicked4)
+
+            # elif module_randpicker == 5:
+            #     print(module_randpicked5)
+
+            # elif module_randpicker == 6:
+            #     pass # there is no string here just yet :>
+         
+
+# all different module strings 
+module_randpicked1 = "1:  module: compute module A7c version 2.3.11"
+module_randpicked2 = "2:  module: V.A.N. NETWORK DRIVER A7B9 version 0.3.11 "
+module_randpicked3 = "3:  module: printfile system custom A4c version 1.2.19 "
+module_randpicked4 = "4:  module: time and server sync systems X93B version 7.0.9"
+module_randpicked5 = "5:  module: interruption resolver and re-connector V43Z version 2.20.2"
 
 # this randomizes the length of all the bars 
 rangerandom1 = random.randint(300, 800)
