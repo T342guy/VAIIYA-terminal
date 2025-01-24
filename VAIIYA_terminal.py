@@ -99,8 +99,10 @@ class startup_func():
                                 "module: printfile system custom A4c version 1.2.19 ",
                                 "module: time and server sync systems X93B version 7.0.9",
                                 "module: interruption resolver and re-connector V43Z version 2.20.2"]
-        time.sleep(.10)
+        
         while True:
+            time.sleep(rand_moduledelay)
+            
             if len(seen_list) == len(module_randpickees): 
                 break
 
@@ -116,6 +118,8 @@ class startup_func():
             print(module_randpickees[n])
             seen_list.append(n)
 
+# randomized the print delay in the listing for the modules.
+rand_moduledelay = random.randint(.5, .14)
 # this randomizes the length of all the bars 
 rangerandom1 = random.randint(300, 800)
 rangerandom2 = random.randint(300, 800)
