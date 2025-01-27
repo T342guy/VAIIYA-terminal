@@ -51,9 +51,13 @@ def headstart():
 
 
 class startup_func():
-    #notes
-    # the unknown module is broke :> 
-    # 
+# NOTE  
+# the `alive_bar` is a replacement for the `ProgressBar` from the `prompt_toolkit.shortcuts` module. < that was the github AI thingy did that hahaha 
+# the `alive_bar` is a lot better and has a lot more features than the `ProgressBar` from the `prompt_toolkit.shortcuts` module.
+# 
+# 
+# 
+
     def bar_1():
         with alive_bar(title="prepping to load system assets...",monitor=False ,stats=False,elapsed='Time elapsed: {elapsed}',elapsed_end='Task was done in {elapsed}',stats_end=False) as bar:
                     for i in range(rangerandom1):
@@ -120,6 +124,7 @@ class startup_func():
 
 # randomized the print delay in the listing for the modules.
 rand_moduledelay = random.uniform(0.2, 0.10)
+
 # this randomizes the length of all the bars 
 rangerandom1 = random.randint(300, 800)
 rangerandom2 = random.randint(300, 800)

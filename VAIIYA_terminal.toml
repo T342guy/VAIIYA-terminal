@@ -1,0 +1,25 @@
+[package]
+name = "VAIIYA_terminal"
+version = "11.1.9"
+authors = ["Nathan Johnson (also known as T342) <chaircomputeroverdrive@gmail.com>"]
+dependencies = [
+    "bcrypt>=4.2.1",
+    "prompt_toolkit>=3.0.48",
+    "wcwidth>=0.2.13",
+    "alive-progress>=3.2.0",
+    "cx-Freeze>=7.2.8",
+]
+
+[dependencies]
+serde = "1.0"
+tokio = { version = "1", features = ["full"] }
+
+
+[tool.cxfreeze]
+executables = [
+    {script = "VAIIYA_terminal.py", base = "console"}
+]
+
+[tool.cxfreeze.build_exe]
+excludes = []
+zip_include_packages = ["bcrypt", "prompt_toolkit", "wcwidth", "alive-progress", "cx-Freeze" ]
