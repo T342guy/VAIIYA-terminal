@@ -119,7 +119,7 @@ class startup_func():
             seen_list.append(n)
 
 # randomized the print delay in the listing for the modules.
-rand_moduledelay = random.randint(.5, .14)
+rand_moduledelay = random.uniform(0.2, 0.10)
 # this randomizes the length of all the bars 
 rangerandom1 = random.randint(300, 800)
 rangerandom2 = random.randint(300, 800)
