@@ -15,6 +15,7 @@ from prompt_toolkit import print_formatted_text, HTML
 import tkinter.messagebox # the windows popup controller
 from alive_progress import alive_bar #replacement loading bars that look wayyyyy better :> 
 from alive_progress.styles import showtime, Show
+from alive_progress import alive_it
 import curses
 from curses import window
 
@@ -24,16 +25,15 @@ def headstart():
 # the headstart def is the MAIN STARTUP DEF AND IS USED TO MAKE THE MAIN STARTUP ILLUSION!!
 
     # start of the startup
-
-    #window.title("VAIIYA Terminal")
     time.sleep(0.20)
     # put any test def here for instant testing in the startup.
-    
+
     startup_func.code_letterizor()
+
 
     startup_func.bar_interpreter_prep()
     time.sleep(0.6)
-    print("program open and ready for run, please wait")
+    print("program open and ready for run, please wait...")
     time.sleep(0.20)
     startup_func.bar_1()
     time.sleep(.1)
@@ -102,6 +102,7 @@ class startup_func():
                         time.sleep(.005)
                         bar() 
 
+
     def module_randor():
         #this part randomizes the order of all the "modules"
         seen_list = []
@@ -134,6 +135,10 @@ class startup_func():
 
     def code_letterizor():
 
+        # the code letterizor is a "startup module" that makes a set of 6, 2 digit codes with letters and numbers.
+        # example: 1A--B2--C3--4D--E5--F6 but randomized.
+
+        time.sleep(0.06)
             #coinflip 1 for if block A should only numbers, letters or both
         if coinflip1 == 0:
             # only numbers block
@@ -285,7 +290,7 @@ coinflip5 = random.randint(0, 3)
 coinflip6 = random.randint(0, 3)
 
 # randomized the print delay in the listing for the modules.
-rand_moduledelay = random.uniform(0.2, 0.10)
+rand_moduledelay = random.uniform(0.14, 0.07)
 
 # this randomizes the length of all the bars 
 rangerandom1 = random.randint(300, 800)
@@ -294,6 +299,7 @@ rangerandom3 = random.randint(300, 800)
 rangerandom4 = random.randint(300, 800)
 rangerandom5 = random.randint(300, 800)
 rangerandom6 = random.randint(300, 800)
+rangerandom_headstartbar = random.randint(200, 670)
          
 
 # Display main menu
