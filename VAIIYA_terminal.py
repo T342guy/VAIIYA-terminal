@@ -15,6 +15,8 @@ from prompt_toolkit import print_formatted_text, HTML
 import tkinter.messagebox # the windows popup controller
 from alive_progress import alive_bar #replacement loading bars that look wayyyyy better :> 
 from alive_progress.styles import showtime, Show
+import curses
+from curses import window
 
 
 def headstart():
@@ -22,7 +24,13 @@ def headstart():
 # the headstart def is the MAIN STARTUP DEF AND IS USED TO MAKE THE MAIN STARTUP ILLUSION!!
 
     # start of the startup
+
+    #window.title("VAIIYA Terminal")
     time.sleep(0.20)
+    # put any test def here for instant testing in the startup.
+    
+    startup_func.code_letterizor()
+
     startup_func.bar_interpreter_prep()
     time.sleep(0.6)
     print("program open and ready for run, please wait")
@@ -122,6 +130,160 @@ class startup_func():
             print(module_randpickees[n])
             seen_list.append(n)
 
+
+
+    def code_letterizor():
+
+            #coinflip 1 for if block A should only numbers, letters or both
+        if coinflip1 == 0:
+            # only numbers block
+            print(rand_numb1A,rand_numb1B, sep="", end="")
+            
+        if coinflip1 == 1:
+            # only letters block
+            print(rand_letter1A,rand_letter1B, sep="", end="")
+
+        if coinflip1 == 2:
+            # letter first then numbers block
+            print(rand_letter1A,rand_numb1A, sep="", end="")
+                 
+        if coinflip1 == 3:
+            # numbers first then letters block
+            print(rand_numb1A,rand_letter1A, sep="", end="")
+
+        print("—", end="")
+
+        #coinflip 2
+        if coinflip2 == 0:
+            # only numbers block
+            print(rand_numb2A,rand_numb2B, sep="", end="")
+
+        if coinflip2 == 1:
+            # only letters block
+            print(rand_letter2A,rand_letter2B, sep="", end="")
+        
+        if coinflip2 == 2:
+            # letter first then numbers block
+            print(rand_letter2A,rand_numb2A, sep="", end="")
+             
+        if coinflip2 == 3:
+            # numbers first then letters block
+            print(rand_numb2A,rand_letter2A, sep="", end="")
+
+        print("—", end="")
+
+        #coinflip 3
+        if coinflip3 == 0:
+            # only numbers block
+            print(rand_numb3A,rand_numb3B, sep="", end="")  
+
+        if coinflip3 == 1:
+            # only letters block
+            print(rand_letter3A,rand_letter3B, sep="", end="")
+
+        if coinflip3 == 2:
+            # letter first then numbers block
+            print(rand_letter3A,rand_numb3A, sep="", end="")
+        
+        if coinflip3 == 3:
+            # numbers first then letters block
+            print(rand_numb3A,rand_letter3A, sep="", end="")
+
+        print("—", end="")
+
+        #coinflip 4
+        if coinflip4 == 0:
+            # only numbers block
+            print(rand_numb4A,rand_numb4B, sep="", end="")
+
+        if coinflip4 == 1:
+            # only letters block
+            print(rand_letter4A,rand_letter4B, sep="", end="")
+
+        if coinflip4 == 2:
+            # letter first then numbers block
+            print(rand_letter4A,rand_numb4A, sep="", end="")
+
+        if coinflip4 == 3:
+            # numbers first then letters block
+            print(rand_numb4A,rand_letter4A, sep="", end="")
+
+        print("—", end="")
+
+        #coinflip 5
+        if coinflip5 == 0:
+            # only numbers block
+            print(rand_numb5A,rand_numb5B, sep="", end="")
+
+        if coinflip5 == 1:
+            # only letters block
+            print(rand_letter5A,rand_letter5B, sep="", end="")
+
+        if coinflip5 == 2:
+            # letter first then numbers block
+            print(rand_letter5A,rand_numb5A, sep="", end="")
+
+        if coinflip5 == 3:
+            # numbers first then letters block
+            print(rand_numb5A,rand_letter5A, sep="", end="")
+
+        print("—", end="")
+
+        #coinflip 6
+        #dont add the end="" here, it will break the code.
+        if coinflip6 == 0:
+            # only numbers block
+            print(rand_numb6A,rand_numb6B, sep="")
+
+        if coinflip6 == 1:
+            # only letters block
+            print(rand_letter6A,rand_letter6B, sep="")
+
+        if coinflip6 == 2:
+            # letter first then numbers block
+            print(rand_letter6A,rand_numb6A, sep="")
+        
+        if coinflip6 == 3:
+            # numbers first then letters block
+            print(rand_numb6A,rand_letter6A, sep="")
+
+
+# number randomizer for the code letterizor
+rand_numb1A = random.randint(0, 9)
+rand_numb1B = random.randint(0, 9)
+rand_numb2A = random.randint(0, 9)
+rand_numb2B = random.randint(0, 9)
+rand_numb3A = random.randint(0, 9)
+rand_numb3B = random.randint(0, 9)
+rand_numb4A = random.randint(0, 9)
+rand_numb4B = random.randint(0, 9)
+rand_numb5A = random.randint(0, 9)
+rand_numb5B = random.randint(0, 9)
+rand_numb6A = random.randint(0, 9)
+rand_numb6B = random.randint(0, 9)
+
+# letter randomizer for the code letterizor
+rand_letter1A = random.choice('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+rand_letter1B = random.choice('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+rand_letter2A = random.choice('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+rand_letter2B = random.choice('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+rand_letter3A = random.choice('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+rand_letter3B = random.choice('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+rand_letter4A = random.choice('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+rand_letter4B = random.choice('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+rand_letter5A = random.choice('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+rand_letter5B = random.choice('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+rand_letter6A = random.choice('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+rand_letter6B = random.choice('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+
+# the coinflip modules for the randomizer
+coinflip1 = random.randint(0, 3)
+coinflip2 = random.randint(0, 3)
+coinflip3 = random.randint(0, 3)
+coinflip4 = random.randint(0, 3)
+coinflip5 = random.randint(0, 3)
+coinflip6 = random.randint(0, 3)
+
 # randomized the print delay in the listing for the modules.
 rand_moduledelay = random.uniform(0.2, 0.10)
 
@@ -133,12 +295,6 @@ rangerandom4 = random.randint(300, 800)
 rangerandom5 = random.randint(300, 800)
 rangerandom6 = random.randint(300, 800)
          
-
-
-
-
-
-
 
 # Display main menu
 def main_menu():

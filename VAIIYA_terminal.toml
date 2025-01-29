@@ -11,8 +11,6 @@ dependencies = [
 ]
 
 [dependencies]
-serde = "1.0"
-tokio = { version = "1", features = ["full"] }
 
 
 [tool.cxfreeze]
