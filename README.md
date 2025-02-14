@@ -16,7 +16,7 @@
 
 
 Welcome VAIIYA trustees and fellow THE FINALS contestants!\
-welcome to the VAIIYA terminal project page!\
+welcome to the VAIIYA terminal project page!
 
 VAIIYA terminal is a for-fun project made by me(T342) and serves mostly the purpose of being entertainment and a story module!\
 <ins>If you wish to download the latest version of VAIIYA Terminal, please go to the [releases page](https://github.com/T342guy/VAIIYA-terminal/releases)!</ins>
