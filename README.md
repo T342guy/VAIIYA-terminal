@@ -13,15 +13,13 @@
 # Welcome to the VAIIYA terminal project page!
 
 
-> [!IMPORTANT]
-> Notices about VAIIYA Termial will show up in this note! 
 
 
-Welcome VAIIYA trustees and fellow THE FINALS contestants!
-welcome to my VAIIYA terminal project page! 
+Welcome VAIIYA trustees and fellow THE FINALS contestants!\
+welcome to the VAIIYA terminal project page!\
 
-VAIIYA terminal is a for-fun project made by me and serves mostly the purpose of being entertainment and a story module! 
-I hope you can join me on my long journey of making this dream come true with me! 
+VAIIYA terminal is a for-fun project made by me(T342) and serves mostly the purpose of being entertainment and a story module!\
+<ins>If you wish to download the latest version of VAIIYA Terminal, please go to the [releases page](https://github.com/T342guy/VAIIYA-terminal/releases)!</ins>
 
 
 
