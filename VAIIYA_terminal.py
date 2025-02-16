@@ -23,13 +23,13 @@ from curses import window
 def headstart():
 # ATTENTION!! READ THIS BEFORE YOU DO SOME SHI 
 # the headstart def is the MAIN STARTUP DEF AND IS USED TO MAKE THE MAIN STARTUP ILLUSION!!
-
+    
+    #os.system(f'mode con: cols={100} lines={100}') # this sets the size of the terminal window.
     # start of the startup
     time.sleep(0.20)
     # put any test def here for instant testing in the startup.
-
+    
     startup_func.code_letterizor()
-
 
     startup_func.bar_interpreter_prep()
     time.sleep(0.6)
@@ -101,7 +101,6 @@ class startup_func():
                     for i in range(rangerandom6):
                         time.sleep(.005)
                         bar() 
-
 
     def module_randor():
         #this part randomizes the order of all the "modules"
