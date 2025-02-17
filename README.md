@@ -3,9 +3,10 @@
 
 <div align="center">
 	<p>
-     <object>
+<object>
 		<a href="https://discord.gg/Qt5Je9sFE5"><img alt="Discord" src="https://img.shields.io/discord/1279687931786694706?style=plastic&label=The%20VAIIYA%20Hub%20discord%20server!&link=https%3A%2F%2Fdiscord.gg%2FQt5Je9sFE5">
-     </object>
+  <a href="https://github.com/THE-FINALS-Community-coders" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/THE_FINALS_community_coders-E?style=flat&logo=thefinals&labelColor=%23D31F3C&color=%23707070">
+</object>
 	</p>
 </div>
 
