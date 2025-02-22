@@ -85,7 +85,7 @@ class startup_func():
                         bar() 
 
     def bar_3():
-        with alive_bar(rangerandom4, title="prepping to send package for VAIIYA system(s) connections...", monitor=False ,stats='ETA: {eta}',elapsed='Time elapsed: {elapsed}',elapsed_end='Task was done in {elapsed}',stats_end=False) as bar: #NOTE bar shi is broken asf, cant get that unknown to work, and cant change the style without it going left to right. not back and forth like i want.
+        with alive_bar(rangerandom4, title="prepping to send package for VAIIYAlink connection...", monitor=False ,stats='ETA: {eta}',elapsed='Time elapsed: {elapsed}',elapsed_end='Task was done in {elapsed}',stats_end=False) as bar: #NOTE bar shi is broken asf, cant get that unknown to work, and cant change the style without it going left to right. not back and forth like i want.
                     for i in range(rangerandom4):
                         time.sleep(.005)
                         bar() 
@@ -97,7 +97,7 @@ class startup_func():
                         bar() 
 # this bar will play the back and forth animation
     def bar_5():
-        with alive_bar(title="requesting system access...", monitor=False, stats=False,elapsed='Time elapsed: {elapsed}',elapsed_end='Task was done in {elapsed}',stats_end=False) as bar:
+        with alive_bar(title="requesting VAIIYAlink and systems connection...", monitor=False, stats=False,elapsed='Time elapsed: {elapsed}',elapsed_end='Task was done in {elapsed}',stats_end=False) as bar:
                     for i in range(rangerandom6):
                         time.sleep(.005)
                         bar() 
@@ -340,6 +340,16 @@ def open_terminal():
             print('hey thanks for saying something!')
             continue
 #this is BELOW the first command. put `elif` on all new commands.
+
+        #is not working in VScode, idk why but tkiner issue or the way VScode terminal works hahaha
+        elif text == 'sys 64738': 
+            msgboxareyousure = tkinter.messagebox.askokcancel(title="Do you really want to reset?", message="Are you sure you want to reset VAIIYA terminal?")
+
+            if msgboxareyousure == True:
+                game_loop()
+            
+            if msgboxareyousure == False:
+                continue
 
         #the credits for the game! 
         elif text == 'credits':
