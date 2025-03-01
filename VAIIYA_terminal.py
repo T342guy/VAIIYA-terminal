@@ -20,6 +20,10 @@ import curses
 from curses import window
 
 
+import STARTUP #the STARTUP.py file located at: ROOT
+
+
+
 def headstart():
 # ATTENTION!! READ THIS BEFORE YOU DO SOME SHI 
 # the headstart def is the MAIN STARTUP DEF AND IS USED TO MAKE THE MAIN STARTUP ILLUSION!!
@@ -29,6 +33,9 @@ def headstart():
     time.sleep(0.20)
     # put any test def here for instant testing in the startup.
     
+    STARTUP.MAINCALL(runtype='BARS_ONLY')
+
+
     startup_func.code_letterizor()
 
     startup_func.bar_interpreter_prep()
