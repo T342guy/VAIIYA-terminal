@@ -31,7 +31,7 @@ class STARTUP_PATH():
         STARTUP_PARTS.BAR.bar_interpreter_prep() # 1 in the list of bars
         time.sleep(.2)
         print("VAIIYAkernel loaded without issues. continuing...")
-        STARTUP_PARTS.BAR.bar_1() # 2 in the list of bars
+        STARTUP_PARTS.BAR.bar_1() # 2 in the list of bars. 
         STARTUP_PARTS.BAR.bar_2() # 3 in the list of bars
         STARTUP_PARTS.BAR.bar_3()
         STARTUP_PARTS.BAR.bar_4()
@@ -44,19 +44,19 @@ class STARTUP_PARTS():
     class BAR():
 
         def bar_1():
-            with alive_bar(title="loading system assets...",monitor=False ,stats=False,elapsed='Time elapsed: {elapsed}',elapsed_end='Task was done in {elapsed}',stats_end=False, bar='checks') as bar:
+            with alive_bar(title="loading binary assets...",monitor=False ,stats=False,elapsed=False,elapsed_end="Done!",stats_end=False, bar=None, spinner='classic') as bar:
                     for i in range(rangerandom1):
                         time.sleep(.005)
                         bar()
 
         def bar_2():
-            with alive_bar( rangerandom2,title="Checking system(s) security integrity...",stats='ETA: {eta}', monitor=False,elapsed='Time elapsed: {elapsed}',elapsed_end='Task was done in {elapsed}',stats_end=False) as bar:
+            with alive_bar( rangerandom2,title="Checking system(s) security integrity...",stats='ETA: {eta}', monitor=False,elapsed=False,elapsed_end='Done!',stats_end=False, bar=None, spinner='classic') as bar:
                     for i in range(rangerandom2):
                         time.sleep(.005)
                         bar()
     
         def bar_interpreter_prep():
-            with alive_bar(title="VAIIYAkernel is warming up, please wait...", monitor=False, stats=False, elapsed='Time elapsed: {elapsed}',elapsed_end='Task was done in {elapsed}',stats_end=False, bar='checks') as bar:
+            with alive_bar(title="VAIIYAkernel is warming up, please wait...", monitor=False, stats=False, elapsed=False,elapsed_end='Done!',stats_end=False, bar=None, spinner='classic') as bar:
                     for i in range(rangerandom3):
                         time.sleep(.005)
                         bar()

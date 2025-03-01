@@ -39,31 +39,26 @@ def headstart():
 
     startup_func.code_letterizor()
 
-    startup_func.bar_interpreter_prep()
-    time.sleep(0.6)
-    print("program open and ready for run, please wait...")
-    time.sleep(0.20)
-    startup_func.bar_1()
-    time.sleep(.1)
-    print("loading system modules...")
-    time.sleep(0.45)
-    # MODULE RANDOR LISTER
-    startup_func.module_randor()
-    time.sleep(0.30)
-    startup_func.bar_2()
-    time.sleep(0.30)
-    startup_func.bar_3()
-    time.sleep(0.39)
-    startup_func.bar_4()
-    time.sleep(0.37)
-    startup_func.bar_5()
-    time.sleep(0.30)
-    print("access approved")
-
-
-
-
-    
+    # startup_func.bar_interpreter_prep()
+    # time.sleep(0.6)
+    # print("program open and ready for run, please wait...")
+    # time.sleep(0.20)
+    # startup_func.bar_1()
+    # time.sleep(.1)
+    # print("loading system modules...")
+    # time.sleep(0.45)
+    # # MODULE RANDOR LISTER
+    # startup_func.module_randor()
+    # time.sleep(0.30)
+    # startup_func.bar_2()
+    # time.sleep(0.30)
+    # startup_func.bar_3()
+    # time.sleep(0.39)
+    # startup_func.bar_4()
+    # time.sleep(0.37)
+    # startup_func.bar_5()
+    # time.sleep(0.30)
+    # print("access approved")
 
 
 class startup_func():
