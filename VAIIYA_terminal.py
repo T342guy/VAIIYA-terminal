@@ -9,7 +9,7 @@ from prompt_toolkit import prompt #general CMD prompts (NOT THE POPUPS)
 from prompt_toolkit.shortcuts import message_dialog
 from prompt_toolkit.shortcuts import yes_no_dialog
 from prompt_toolkit.shortcuts import input_dialog
-import bcrypt # bcrypt is used for the password thingys 
+import bcrypt # bcrypt is used for the password things 
 from datetime import datetime
 from prompt_toolkit import print_formatted_text, HTML
 import tkinter.messagebox # the windows popup controller
@@ -324,7 +324,7 @@ def timefetch():
     print("have a wonderful CHRISTMAS day at VAIIYA Technologies LLC!")
     print("""|""")
 
-#this is here so that this doesnt dupe every time the commandline reprints. it now only happens once.
+#this is here so that this doesn't dupe every time the commandline reprints. it now only happens once.
 def terminal_start_message():
     print(" for a list of commands, please type 'commands' ")
     print("""|""")
@@ -571,7 +571,7 @@ def walker_entered():
             return
         
         else:
-            print("that isnt a command. use 'commands'")
+            print("that isn't a command. use 'commands'")
 
     
 
