@@ -1,14 +1,15 @@
 # Security Policy
 
-I hereby T342, (also known as T342guy, or Nathan Johnson) say that I or my contributer(s) / contributee(s) may not put any kind of Security, Privacy, Virus and/or Malicious program inside my programs or sub-programs in this code. 
+This code <ins>***DOES NOT***</ins> interact with your computer in any way other then running the python script. 
 
-If there is any such issue with malicious programs and/or viruses in this code, I may review and put out a statement immediately and the respective contributer(s) / contributee(s) will be held responsible, 
+> [!IMPORTANT]
+> I AM AWARE OF THE "WINDOWS PROTECTED YOUR PC" PROMPT, AND THERE IS NOTHING I CAN DO.\
+> YOU CAN SAFELY IGNORE THIS PROMPT BY GOING TO <ins> __MORE > RUN ANYWAYS__</ins>
 
-and banned from this repository post-haste. With the addition of me identifying the threat and releasing a version that is not contaminated.
+### COMPATIBILITY
 
-and here as a side note; ***THIS CODE DOES NOT INTERACT WITH THE INTERNET OR ANY PART OF YOUR DEVICE, IF YOU SEE A ADMIN PROMPT FROM THIS CODE, DO NOT ALLOW IT AND NOTIFY ME IMMEDIATELY!***
-
-
-**ADDITIONAL NOTE: WINDOWS SMART APP CONTROL DOES NOT COUNT AS A ADMIN PROMPT, I AM ALREADY AWARE OF THE SMART APP CONTROL ISSUE.**
-
-Thank you for your understanding.
+|PLATFORM| COMPATIBLE? | WHY? | 
+|--------| ------------|------| 
+| WINDOWS|     ✅     | The OS I build VT on, and some of the imports I use are not compatible with linux or macos. |
+|   LINUX|     ❌     | some imports I use are incompatible with linux. | 
+|  MAC OS|     ❌     | I do not own a MAC, nor do any of the imports support MACOS. |
