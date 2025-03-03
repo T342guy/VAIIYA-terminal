@@ -37,7 +37,7 @@ def headstart():
     STARTUP.MAINCALL(runtype='BARS_ONLY')
 
 
-    startup_func.code_letterizor()
+    #startup_func.code_letterizor()
 
     # startup_func.bar_interpreter_prep()
     # time.sleep(0.6)

@@ -1,6 +1,12 @@
 import random
 import time
+#BARS STUFF BELOW
 from alive_progress import alive_bar
+# ASCIIMATICS STUFF BELOW
+from asciimatics.effects import Cycle, Stars
+from asciimatics.renderers import FigletText
+from asciimatics.scene import Scene
+from asciimatics.screen import Screen
 
 #NOTE: THIS FILE IS TO BE CALLED INTO VAIIYA_terminal.py. 
 # only asciimatics and the other startup stuff IS TO BE CALLED!!!
@@ -28,12 +34,13 @@ class STARTUP_PATH():
         pass
 
     def ASCIIMATICS_TESTING_1():
-        pass
+        STARTUP_PARTS.ASCIIMATICS.ASCIIMATICS_1()
     
     def BARS_ONLY():
         STARTUP_PARTS.BAR.bar_interpreter_prep() # 1 in the list of bars
         time.sleep(.2)
         print("VAIIYAkernel loaded without issues. continuing...")
+        time.sleep(.2)
         STARTUP_PARTS.BAR.bar_1() # 2 in the list of bars. 
         STARTUP_PARTS.BAR.bar_2() # 3 in the list of bars
         STARTUP_PARTS.BAR.bar_3()
@@ -236,6 +243,25 @@ class STARTUP_PARTS():
             print(module_randpickees[n])
             seen_list.append(n)
 
+# MOVE INTO `.\assets\ASCIIMATICS\ASCIIMATICS.py` mr future T3 \(￣︶￣*\))
+    class ASCIIMATICS():
+    
+        def ASCIIMATICS_1(screen):
+            while True:
+                effects = [
+                    Cycle(
+                        screen,
+                        FigletText("VAIIYA IS THE", font='big'),
+                        int(screen.height / 2 - 8)),
+                    Cycle(
+                        screen,
+                        FigletText("BEST!", font='standard'),
+                        int(screen.height / 2 + 3)),
+                    Stars(screen, 200)
+                ]
+                screen.play([Scene(effects, 500)])
+
+        Screen.wrapper(ASCIIMATICS_1)
 
 
 # VALUES
