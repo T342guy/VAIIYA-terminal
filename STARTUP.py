@@ -14,8 +14,8 @@ def MAINCALL(runtype='default'):
     if runtype == 'default':
         STARTUP_PATH.DEFAULT()
 
-    if runtype == 'DEBUG':
-        pass #put stuff here
+    if runtype == 'ASCIIMATICS_TESTING_1':
+        STARTUP_PATH.ASCIIMATICS_TESTING_1()
 
     if runtype == 'BARS_ONLY':
         STARTUP_PATH.BARS_ONLY()
@@ -27,6 +27,9 @@ class STARTUP_PATH():
     def DEFAULT():
         pass
 
+    def ASCIIMATICS_TESTING_1():
+        pass
+    
     def BARS_ONLY():
         STARTUP_PARTS.BAR.bar_interpreter_prep() # 1 in the list of bars
         time.sleep(.2)
