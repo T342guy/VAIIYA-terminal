@@ -3,9 +3,10 @@
 
 <div align="center">
 	<p>
-     <object>
+<object>
 		<a href="https://discord.gg/Qt5Je9sFE5"><img alt="Discord" src="https://img.shields.io/discord/1279687931786694706?style=plastic&label=The%20VAIIYA%20Hub%20discord%20server!&link=https%3A%2F%2Fdiscord.gg%2FQt5Je9sFE5">
-     </object>
+  <a href="https://github.com/THE-FINALS-Community-coders" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/THE_FINALS_community_coders-E?style=flat&logo=thefinals&labelColor=%23D31F3C&color=%23707070">
+</object>
 	</p>
 </div>
 
@@ -13,15 +14,13 @@
 # Welcome to the VAIIYA terminal project page!
 
 
-> [!IMPORTANT]
-> Notices about VAIIYA Termial will show up in this note! 
 
 
-Welcome VAIIYA trustees and fellow THE FINALS contestants!
-welcome to my VAIIYA terminal project page! 
+Welcome VAIIYA trustees and fellow THE FINALS contestants!\
+welcome to the VAIIYA terminal project page!
 
-VAIIYA terminal is a for-fun project made by me and serves mostly the purpose of being entertainment and a story module! 
-I hope you can join me on my long journey of making this dream come true with me! 
+VAIIYA terminal is a for-fun project made by me(T342) and serves mostly the purpose of being entertainment and a story module!\
+<ins>If you wish to download the latest version of VAIIYA Terminal, please go to the [releases page](https://github.com/T342guy/VAIIYA-terminal/releases)!</ins>
 
 
 
