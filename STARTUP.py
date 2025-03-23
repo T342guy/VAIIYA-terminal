@@ -92,126 +92,100 @@ class STARTUP_PARTS():
                         bar()
 
 
-    def code_letterizor():
+    class code_letterizor():
 
         # the code letterizor is a "startup module" that makes a set of 6, 2 digit codes with letters and numbers.
         # example: 1A--B2--C3--4D--E5--F6 but randomized.
 
         time.sleep(0.06)
-            #coinflip 1 for if block A should only numbers, letters or both
-        if coinflip1 == 0:
-            # only numbers block
-            print(rand_numb1A,rand_numb1B, sep="", end="")
-            
-        if coinflip1 == 1:
-            # only letters block
-            print(rand_letter1A,rand_letter1B, sep="", end="")
-
-        if coinflip1 == 2:
-            # letter first then numbers block
-            print(rand_letter1A,rand_numb1A, sep="", end="")
-                 
-        if coinflip1 == 3:
-            # numbers first then letters block
-            print(rand_numb1A,rand_letter1A, sep="", end="")
-
-        print("—", end="")
-
-        #coinflip 2
-        if coinflip2 == 0:
-            # only numbers block
-            print(rand_numb2A,rand_numb2B, sep="", end="")
-
-        if coinflip2 == 1:
-            # only letters block
-            print(rand_letter2A,rand_letter2B, sep="", end="")
         
-        if coinflip2 == 2:
-            # letter first then numbers block
-            print(rand_letter2A,rand_numb2A, sep="", end="")
-             
-        if coinflip2 == 3:
-            # numbers first then letters block
-            print(rand_numb2A,rand_letter2A, sep="", end="")
+        def coinflip_1(numberset_1):
+            match numberset_1:
+                #num-ltr
+                case 1:
+                    return rand_numb1A, rand_letter1A
+                    #ltr-num 
+                case 2:
+                    return rand_letter1A, rand_numb1A
+                    #ltr-ltr
+                case 3:
+                    return rand_letter1A, rand_letter1B
+                #num-num
+                case 4:
+                    return rand_numb1B, rand_numb1A
 
-        print("—", end="")
+        def coinflip_2(numberset_2):
+            match numberset_2:
+                case 1:
+                    return rand_numb2A, rand_letter2A
+                    #ltr-num 
+                case 2:
+                    return rand_letter2A, rand_numb2A
+                    #ltr-ltr
+                case 3:
+                    return rand_letter2A, rand_letter2B
+                #num-num
+                case 4:
+                    return rand_numb2B, rand_numb2A
+        def coinflip_3(numberset_3):
+            match numberset_3:
+                case 1:
+                    return rand_numb3A, rand_letter3A
+                # ltr-num
+                case 2:
+                    return rand_letter3A, rand_numb3A
+                # ltr-ltr
+                case 3:
+                    return rand_letter3A, rand_letter3B
+                            # num-num
+                case 4:
+                    return rand_numb3B, rand_numb3A
 
-        #coinflip 3
-        if coinflip3 == 0:
-            # only numbers block
-            print(rand_numb3A,rand_numb3B, sep="", end="")  
+        def coinflip_4(numberset_4):
+            match numberset_4:
+                case 1:
+                    return rand_numb4A, rand_letter4A
+                    #ltr-num 
+                case 2:
+                    return rand_letter4A, rand_numb4A
+                    #ltr-ltr
+                case 3:
+                    return rand_letter4A, rand_letter4B
+                #num-num
+                case 4:
+                    return rand_numb4B, rand_numb4A
 
-        if coinflip3 == 1:
-            # only letters block
-            print(rand_letter3A,rand_letter3B, sep="", end="")
+        def coinflip_5(numberset_5):
+            match numberset_5:
+                case 1:
+                    return rand_numb5A, rand_letter5A
+                    #ltr-num 
+                case 2:
+                    return rand_letter5A, rand_numb5A
+                    #ltr-ltr
+                case 3:
+                    return rand_letter5A, rand_letter5B
+                #num-num
+                case 4:
+                    return rand_numb5B, rand_numb5A
 
-        if coinflip3 == 2:
-            # letter first then numbers block
-            print(rand_letter3A,rand_numb3A, sep="", end="")
-        
-        if coinflip3 == 3:
-            # numbers first then letters block
-            print(rand_numb3A,rand_letter3A, sep="", end="")
+        def coinflip_6(numberset_6):
+            match numberset_6:
+                case 1:
+                    return rand_numb6A, rand_letter6A
+                    #ltr-num 
+                case 2:
+                    return rand_letter6A, rand_numb6A
+                    #ltr-ltr
+                case 3:
+                    return rand_letter6A, rand_letter6B
+                #num-num
+                case 4:
+                    return rand_numb6B, rand_numb6A
 
-        print("—", end="")
+        def _return_codesets():
+            print(numberset_1,"-",numberset_2,"-",numberset_3,"-",numberset_4,"-",numberset_5,"-",numberset_6)
 
-        #coinflip 4
-        if coinflip4 == 0:
-            # only numbers block
-            print(rand_numb4A,rand_numb4B, sep="", end="")
-
-        if coinflip4 == 1:
-            # only letters block
-            print(rand_letter4A,rand_letter4B, sep="", end="")
-
-        if coinflip4 == 2:
-            # letter first then numbers block
-            print(rand_letter4A,rand_numb4A, sep="", end="")
-
-        if coinflip4 == 3:
-            # numbers first then letters block
-            print(rand_numb4A,rand_letter4A, sep="", end="")
-
-        print("—", end="")
-
-        #coinflip 5
-        if coinflip5 == 0:
-            # only numbers block
-            print(rand_numb5A,rand_numb5B, sep="", end="")
-
-        if coinflip5 == 1:
-            # only letters block
-            print(rand_letter5A,rand_letter5B, sep="", end="")
-
-        if coinflip5 == 2:
-            # letter first then numbers block
-            print(rand_letter5A,rand_numb5A, sep="", end="")
-
-        if coinflip5 == 3:
-            # numbers first then letters block
-            print(rand_numb5A,rand_letter5A, sep="", end="")
-
-        print("—", end="")
-
-        #coinflip 6
-        #dont add the end="" here, it will break the code.
-        if coinflip6 == 0:
-            # only numbers block
-            print(rand_numb6A,rand_numb6B, sep="")
-
-        if coinflip6 == 1:
-            # only letters block
-            print(rand_letter6A,rand_letter6B, sep="")
-
-        if coinflip6 == 2:
-            # letter first then numbers block
-            print(rand_letter6A,rand_numb6A, sep="")
-        
-        if coinflip6 == 3:
-            # numbers first then letters block
-            print(rand_numb6A,rand_letter6A, sep="")
-
-    
     def module_randomizer():
         #this part randomizes the order of all the "modules"
         seen_list = []
