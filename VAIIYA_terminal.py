@@ -34,7 +34,7 @@ def headstart():
     time.sleep(0.20)
     # put any test def here for instant testing in the startup.
     
-    STARTUP.MAINCALL(runtype='BARS_ONLY')
+    STARTUP.MAINCALL(runtype='CODE_LETTERIZOR')
 
 
     #startup_func.code_letterizor()

@@ -26,12 +26,15 @@ def MAINCALL(runtype='default'):
     if runtype == 'BARS_ONLY':
         STARTUP_PATH.BARS_ONLY()
 
+    if runtype == 'CODE_LETTERIZOR':
+        STARTUP_PATH.CODE_LETTERIZOR()
+
 
 # this is a set of follow paths for the above settings system to use^^ 
 class STARTUP_PATH():
 
     def DEFAULT():
-        pass
+        pass #add the entire startup here,
 
     def ASCIIMATICS_TESTING_1():
         STARTUP_PARTS.ASCIIMATICS.ASCIIMATICS_1()
@@ -46,6 +49,10 @@ class STARTUP_PATH():
         STARTUP_PARTS.BAR.bar_3()
         STARTUP_PARTS.BAR.bar_4()
         STARTUP_PARTS.BAR.bar_5()
+
+    def CODE_LETTERIZOR():
+        STARTUP_PARTS.code_letterizor.RUN_codelettorizor()
+
 
 # this is the RAW startup parts, later to be organized in the startup paths
 class STARTUP_PARTS():
@@ -101,90 +108,96 @@ class STARTUP_PARTS():
         
         def coinflip_1(numberset_1):
             match numberset_1:
-                #num-ltr
+            #num-ltr
                 case 1:
-                    return rand_numb1A, rand_letter1A
-                    #ltr-num 
+                    print(rand_numb1A, rand_letter1A)
+                #ltr-num 
                 case 2:
-                    return rand_letter1A, rand_numb1A
-                    #ltr-ltr
+                    print(rand_letter1A, rand_numb1A)
+                #ltr-ltr
                 case 3:
-                    return rand_letter1A, rand_letter1B
+                    print(rand_letter1A, rand_letter1B)
                 #num-num
                 case 4:
-                    return rand_numb1B, rand_numb1A
+                    print(rand_numb1B, rand_numb1A)
 
         def coinflip_2(numberset_2):
             match numberset_2:
                 case 1:
-                    return rand_numb2A, rand_letter2A
+                    print(rand_numb2A, rand_letter2A)
                     #ltr-num 
                 case 2:
-                    return rand_letter2A, rand_numb2A
+                    print(rand_letter2A, rand_numb2A)
                     #ltr-ltr
                 case 3:
-                    return rand_letter2A, rand_letter2B
+                    print(rand_letter2A, rand_letter2B)
                 #num-num
                 case 4:
-                    return rand_numb2B, rand_numb2A
+                    print(rand_numb2B, rand_numb2A)
         def coinflip_3(numberset_3):
             match numberset_3:
                 case 1:
-                    return rand_numb3A, rand_letter3A
+                    print(rand_numb3A, rand_letter3A)
                 # ltr-num
                 case 2:
-                    return rand_letter3A, rand_numb3A
+                    print(rand_letter3A, rand_numb3A)
                 # ltr-ltr
                 case 3:
-                    return rand_letter3A, rand_letter3B
-                            # num-num
+                    print(rand_letter3A, rand_letter3B)
+                    # num-num
                 case 4:
-                    return rand_numb3B, rand_numb3A
+                    print(rand_numb3B, rand_numb3A)
 
         def coinflip_4(numberset_4):
             match numberset_4:
                 case 1:
-                    return rand_numb4A, rand_letter4A
+                    print(rand_numb4A, rand_letter4A)
                     #ltr-num 
                 case 2:
-                    return rand_letter4A, rand_numb4A
-                    #ltr-ltr
+                    print(rand_letter4A, rand_numb4A)
+                #ltr-ltr
                 case 3:
-                    return rand_letter4A, rand_letter4B
+                    print(rand_letter4A, rand_letter4B)
                 #num-num
                 case 4:
-                    return rand_numb4B, rand_numb4A
+                    print(rand_numb4B, rand_numb4A)
 
         def coinflip_5(numberset_5):
             match numberset_5:
                 case 1:
-                    return rand_numb5A, rand_letter5A
-                    #ltr-num 
+                    print(rand_numb5A, rand_letter5A)
+                #ltr-num 
                 case 2:
-                    return rand_letter5A, rand_numb5A
-                    #ltr-ltr
+                    print(rand_letter5A, rand_numb5A)
+                #ltr-ltr
                 case 3:
-                    return rand_letter5A, rand_letter5B
-                #num-num
+                    print(rand_letter5A, rand_letter5B)
+            #num-num
                 case 4:
-                    return rand_numb5B, rand_numb5A
+                    print(rand_numb5B, rand_numb5A)
 
         def coinflip_6(numberset_6):
             match numberset_6:
                 case 1:
-                    return rand_numb6A, rand_letter6A
-                    #ltr-num 
+                    print(rand_numb6A, rand_letter6A)
+                #ltr-num 
                 case 2:
-                    return rand_letter6A, rand_numb6A
-                    #ltr-ltr
+                    print(rand_letter6A, rand_numb6A)
+                #ltr-ltr
                 case 3:
-                    return rand_letter6A, rand_letter6B
+                    print(rand_letter6A, rand_letter6B)
                 #num-num
                 case 4:
-                    return rand_numb6B, rand_numb6A
+                    print(rand_numb6B, rand_numb6A)
 
-        def _return_codesets():
-            print(numberset_1,"-",numberset_2,"-",numberset_3,"-",numberset_4,"-",numberset_5,"-",numberset_6)
+        def RUN_codelettorizor():
+            coinflip1()
+            coinflip2()
+            coinflip3()
+            coinflip4()
+            coinflip5()
+            coinflip6()
+            
 
     def module_randomizer():
         #this part randomizes the order of all the "modules"
@@ -218,25 +231,24 @@ class STARTUP_PARTS():
             seen_list.append(n)
 
 # MOVE INTO `.\assets\ASCIIMATICS\ASCIIMATICS.py` mr future T3 \(￣︶￣*\))
-    class ASCIIMATICS():
+    # class ASCIIMATICS():
     
-        def ASCIIMATICS_1(screen):
-            while True:
-                effects = [
-                    Cycle(
-                        screen,
-                        FigletText("VAIIYA IS THE", font='big'),
-                        int(screen.height / 2 - 8)),
-                    Cycle(
-                        screen,
-                        FigletText("BEST!", font='standard'),
-                        int(screen.height / 2 + 3)),
-                    Stars(screen, 200)
-                ]
-                screen.play([Scene(effects, 500)])
+    #     def ASCIIMATICS_1(screen):
+    #         while True:
+    #             effects = [
+    #                 Cycle(
+    #                     screen,
+    #                     FigletText("VAIIYA IS THE", font='big'),
+    #                     int(screen.height / 2 - 8)),
+    #                 Cycle(
+    #                     screen,
+    #                     FigletText("BEST!", font='standard'),
+    #                     int(screen.height / 2 + 3)),
+    #                 Stars(screen, 200)
+    #             ]
+    #             screen.play([Scene(effects, 500)])
 
-        Screen.wrapper(ASCIIMATICS_1)
-
+    #     Screen.wrapper(ASCIIMATICS_1)
 
 # VALUES
 
