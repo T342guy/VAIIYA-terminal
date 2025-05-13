@@ -13,7 +13,9 @@
 
 # Welcome to the VAIIYA terminal project page!
 
-
+> [!NOTE]
+> The VAIIYA terminal project is going read-only. all prev releases are avalable. 
+> it has been an honor.
 
 
 Welcome VAIIYA trustees and fellow THE FINALS contestants!\
